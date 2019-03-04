@@ -42,44 +42,36 @@ type UserViewsResponse struct {
 
 // UserView represents a single user-visible view
 type UserView struct {
-	Name           string        `json:"Name"`
-	ServerID       string        `json:"ServerId"`
-	ID             string        `json:"Id"`
-	Etag           string        `json:"Etag"`
-	DateCreated    string        `json:"DateCreated"`
-	CanDelete      bool          `json:"CanDelete"`
-	CanDownload    bool          `json:"CanDownload"`
-	SortName       string        `json:"SortName"`
-	ExternalUrls   []string      `json:"ExternalUrls"`
-	Path           string        `json:"Path"`
-	Taglines       []string      `json:"Taglines"`
-	Genres         []string      `json:"Genres"`
-	PlayAccess     string        `json:"PlayAccess"`
-	RemoteTrailers []interface{} `json:"RemoteTrailers"`
-	ProviderIds    interface{}   `json:"ProviderIds"`
-	IsFolder       bool          `json:"IsFolder"`
-	ParentID       string        `json:"ParentId"`
-	Type           string        `json:"Type"`
-	Studios        []interface{} `json:"Studios"`
-	GenreItems     []interface{} `json:"GenreItems"`
-	UserData       struct {
-		PlaybackPositionTicks int    `json:"PlaybackPositionTicks"`
-		PlayCount             int    `json:"PlayCount"`
-		IsFavorite            bool   `json:"IsFavorite"`
-		Played                bool   `json:"Played"`
-		Key                   string `json:"Key"`
-	} `json:"UserData"`
-	ChildCount              int      `json:"ChildCount"`
-	DisplayPreferencesID    string   `json:"DisplayPreferencesId"`
-	Tags                    []string `json:"Tags"`
-	PrimaryImageAspectRatio float32  `json:"PrimaryImageAspectRatio,omitempty"`
-	CollectionType          string   `json:"CollectionType"`
-	ImageTags               struct {
-		Primary string `json:"Primary"`
-	} `json:"ImageTags"`
-	BackdropImageTags []interface{} `json:"BackdropImageTags"`
-	LockedFields      []interface{} `json:"LockedFields"`
-	LockData          bool          `json:"LockData"`
+	Name                    string        `json:"Name"`
+	ServerID                string        `json:"ServerId"`
+	ID                      string        `json:"Id"`
+	Etag                    string        `json:"Etag"`
+	DateCreated             string        `json:"DateCreated"`
+	CanDelete               bool          `json:"CanDelete"`
+	CanDownload             bool          `json:"CanDownload"`
+	SortName                string        `json:"SortName"`
+	ExternalUrls            []string      `json:"ExternalUrls"`
+	Path                    string        `json:"Path"`
+	Taglines                []string      `json:"Taglines"`
+	Genres                  []string      `json:"Genres"`
+	PlayAccess              string        `json:"PlayAccess"`
+	RemoteTrailers          []interface{} `json:"RemoteTrailers"`
+	ProviderIds             interface{}   `json:"ProviderIds"`
+	IsFolder                bool          `json:"IsFolder"`
+	ParentID                string        `json:"ParentId"`
+	Type                    string        `json:"Type"`
+	Studios                 []interface{} `json:"Studios"`
+	GenreItems              []interface{} `json:"GenreItems"`
+	UserData                UserData      `json:"UserData"`
+	ChildCount              int           `json:"ChildCount"`
+	DisplayPreferencesID    string        `json:"DisplayPreferencesId"`
+	Tags                    []string      `json:"Tags"`
+	PrimaryImageAspectRatio float32       `json:"PrimaryImageAspectRatio,omitempty"`
+	CollectionType          string        `json:"CollectionType"`
+	ImageTags               ImageTags     `json:"ImageTags"`
+	BackdropImageTags       []interface{} `json:"BackdropImageTags"`
+	LockedFields            []interface{} `json:"LockedFields"`
+	LockData                bool          `json:"LockData"`
 }
 
 // MediaItemList is the list of items belonging to a user view
